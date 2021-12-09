@@ -10,19 +10,30 @@
 //  la nota tiene un equivalente a Mala; caso contrario se considera Buena
 1.  Inicio
 2.  (notasEstudiante(3),i[0-n])
-3.  (notasEstudianteCualitativo(3), x(20)[{a-z}, {BS}])
+3.  (notasEstudianteCualitativo(3), x(20)[{a-z},{A-Z}, {BS}])
 4.  indice, i[0-n]
 5.  notasEstudiante[0] <-- 8
 6.  notasEstudiante[1] <-- 5
 7.  notasEstudiante[2] <-- 2
+    Calificacion[0-n]
+    nota, x(15)[{A-Z},{a-z}]
 8.  Para(indice<--0, indice<3, 1) haga
 9.    Escribir notasEstudiante[indice]
+      Si (notasEstudiante[indice] <=5 && notaEstudiante[indice] > 0 ) entonces 
+         nota = "mala"
+      De lo contrario
+          Si (notasEstudiante[Indice] > 5 entonces) 
+              nota = "buena"
+    Fin_ si
+    Fin_si   
 14. Fin_Para
 15. // presenta el siguiente reporte
     // 8 es calificación -- Buena
     // 5 es calificación -- Mala
     // 2 es calificación -- Mala
 15. Para(indice<--0, indice<3, 1) haga
-16.   //
+
+16. Escribir notasEstudiante[indice]  +" "+ "Es calificacion" +" "+ nota\n
+
 17. Fin_Para
 18. Fin
